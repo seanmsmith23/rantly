@@ -1,1 +1,47 @@
+.splash-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  background-color: darkgrey;
+}
 
+.jeff-face {
+  height: 175px;
+  width: 175px;
+  display: inline-block;
+}
+
+.splash-block {
+  color: white;
+  margin-bottom: 0;
+  margin-left: 10px;
+  display: inline-block;
+  width: 55%;
+}
+
+.splash-bottom-content {
+  position: absolute;
+  left: 20%;
+  bottom: 30%;
+  width: 75%;
+}
+
+.splash-content {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+}
+
+.main-content {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sub-content {
+  font-size: 20px;
+  font-weight: bold;
+}

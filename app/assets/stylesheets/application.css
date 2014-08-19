@@ -19,21 +19,26 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 90%;
+    height: 60px;
     background-color: black;
 }
 
 .header-text {
-    position: absolute;
-    top: 30%;
-    left: 3%;
     color: white;
-    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 40px;
 }
 
 .wrapper {
     margin: auto;
     width: 980px;
+}
+
+.right-side-nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .join-button {
@@ -42,18 +47,21 @@
     background-color: green;
     color: white;
     padding: 8px 30px 8px 30px;
-    position: absolute;
-    right: 3%;
-    top: 15%;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .login-link {
     color: white;
-    position: absolute;
-    right: 10%;
-    top: 35%;
+    margin-right: 10px;
 }
+
+.down-ten {
+    position: absolute;
+    top: 10%;
+}
+
+
+
 
 /* ----- =columns ----- */
 

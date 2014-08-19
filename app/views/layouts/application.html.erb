@@ -9,8 +9,10 @@
 </head>
 <header class="header-nav">
     <h3 class="header-text">Rant.ly</h3>
-    <%= link_to "Join", new_registration_path, class: "join-button" %>
-    <%= link_to "Login", new_session_path, class: "login-link" %>
+    <div class="right-side-nav">
+      <%= link_to "Login", new_session_path, class: "login-link" %>
+      <%= link_to "JOIN", new_registration_path, class: "join-button" %>
+    </div>
 </header>
 <body>
 
