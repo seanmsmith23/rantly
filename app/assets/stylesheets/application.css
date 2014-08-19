@@ -13,3 +13,79 @@
  *= require_tree .
  *= require_self
  */
+
+.header-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 90%;
+    background-color: black;
+}
+
+.header-text {
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    color: white;
+    margin: 0;
+}
+
+.wrapper {
+    margin: auto;
+    width: 980px;
+}
+
+.join-button {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: green;
+    color: white;
+    padding: 8px 30px 8px 30px;
+    position: absolute;
+    right: 3%;
+    top: 15%;
+    font-size: 20px;
+}
+
+.login-link {
+    color: white;
+    position: absolute;
+    right: 10%;
+    top: 35%;
+}
+
+/* ----- =columns ----- */
+
+.one_fourth {	 width:220px; }
+.one_third {	 width:300px; }
+.one_half { 	 width:460px; }
+.two_third {	 width:620px; }
+.three_fourth { width:700px; }
+.full_column {	 width:940px; }
+
+/* clearfix */
+.clearfix:before,
+.clearfix:after { content: " "; display: table; }
+
+.clearfix:after { clear: both; }
+
+/* * For IE 6/7 only * Include this rule to trigger hasLayout and contain floats. */
+.clearfix { *zoom: 1; }
+
+/* DEMO STYLE - Box Outlines  */
+
+article {
+    box-sizing:border-box;
+    padding: 10px;
+    position:relative;
+    margin-left:20px;
+    margin-bottom:16px;
+    float:left;
+}
+
+section {
+    box-sizing:border-box;
+    padding: 20px 0 10px 0;
+}
+
