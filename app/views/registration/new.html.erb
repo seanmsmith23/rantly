@@ -1,6 +1,6 @@
 <div class="right-side-nav">
   <%= link_to "Login", new_session_path, class: "login-link" %>
-  <%= link_to "JOIN", new_registration_path, class: "join-button" %>
+  <%= link_to "JOIN", new_registration_path, class: "join-button", id: "join-button"%>
 </div>
 
 <div class="splash-content">
@@ -11,8 +11,50 @@
 <div class="splash-bottom">
   <div class="splash-bottom-content">
     <img src="https://secure.gravatar.com/avatar/ba5a9e5d58ca27cc667aaf826ce91032?s=420&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" class="jeff-face">
-    <p class="splash-block">"Rantly has allowed a certain freedom I never though possible. Now I can rant to the internet at large without having to worry about my thoughts. I just type it out, hit click, and feel the surge of relief. Thanks Rantly, you've trule made my most inane rants heard. I remember a time when I wan't able to truly express myself. It's really frustrating when you want to be heard and no one..."<br><br>| Jeff Taggart, avid Ranter</p>
+    <p class="splash-block">"Rantly has allowed a certain freedom I never thought possible. Now I can rant to the internet at large without having to worry about my thoughts. I just type it out, hit click, and feel the surge of relief. Thanks Rantly, you've trule made my most inane rants heard. I remember a time when I wan't able to truly express myself. It's really frustrating when you want to be heard and no one..."<br><br>| Jeff Taggart, avid Ranter</p>
   </div>
 </div>
+
+<div class="registration-form" id="registration-form">
+  <%= form_for @user, url: registration_index_path do |f| %>
+    <div class="personal-info-input">
+      <div>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+      </div>
+      <div>
+        <%= f.label :password %>
+        <%= f.text_field :password %>
+      </div>
+      <div>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+      </div>
+      <div>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+      </div>
+    </div>
+    <div>
+      <%= f.label :bio %>
+      <%= f.text_area :bio %>
+    </div>
+    <div>
+      <%= f.label :frequency, "How often do you rant?" %>
+    </div>
+    <div>
+      <%= f.label :frequency, "Daily" %>
+      <%= f.radio_button :frequency, 'Daily' %>
+      <%= f.label :frequency, "Weekly" %>
+      <%= f.radio_button :frequency, "Weekly" %>
+      <%= f.label :frequency, "Monthly" %>
+      <%= f.radio_button :frequency, "Monthly" %>
+    </div>
+      <%= f.submit "REGISTER" %>
+  <% end %>
+</div>
+
+
+
 
 
