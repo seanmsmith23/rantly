@@ -52,5 +52,14 @@ feature "Rants Homepage" do
     expect(page).to_not have_content(rant.content)
   end
 
+  scenario "User can see other users rants" do
+    user1 = create_user
+    user2 = create_user(first_name: "Henrietta")
+    rant = create_rant(user_id: user2.id)
+    sign_in(user1)
+
+    expect(page).to have_content("Latest Rants")
+    expect(page).to have_content(rant.content)
+  end
 
 end

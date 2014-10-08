@@ -1,13 +1,15 @@
 class Dashboard
-  attr_accessor :rants
 
   def initialize(user)
     @user = user
-    @rants = Rant.all
   end
 
   def new_rant
     Rant.new
+  end
+
+  def others_users_rants
+    Rant.all - my_rants
   end
 
   def my_rants
