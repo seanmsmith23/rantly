@@ -18,6 +18,7 @@ gem 'spring',        group: :development
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'selenium-webdriver'
 end
 
 gem 'bcrypt', '~> 3.1.7'
