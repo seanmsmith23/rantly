@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :rants, only: [:new, :create, :destroy]
 
   resources :users, only: [:edit, :update] do
-    resources :followers, only: [:create, :index]
+    resources :followers, only: [:create, :index, :destroy]
   end
 
   get "/logout", to: "sessions#destroy", as: :logout

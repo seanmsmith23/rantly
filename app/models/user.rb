@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def is_following?(user)
+    Follower.where(following_id: user.id, follower_id: id) != [] ? true : false
+  end
 end
