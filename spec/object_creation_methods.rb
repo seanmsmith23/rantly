@@ -3,3 +3,7 @@ def create_user(overrides = {})
   User.create(default.merge(overrides))
 end
 
+def create_rant(overrides = {})
+  default = {content: "Here is some kind of rant", user_id: 1}
+  Rant.create(default.merge(overrides))
+end

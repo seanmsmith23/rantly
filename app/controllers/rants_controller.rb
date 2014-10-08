@@ -8,6 +8,12 @@ class RantsController < ApplicationController
     redirect_to root_path, notice: "Rant added successfully"
   end
 
+  def destroy
+    rant = Rant.find(params[:id])
+    rant.destroy
+    redirect_to root_path, notice: "Rant was deleted"
+  end
+
   private
 
   # def rant_params

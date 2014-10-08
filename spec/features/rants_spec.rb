@@ -38,4 +38,19 @@ feature "Rants Homepage" do
 
     expect(page).to have_content("Something")
   end
+
+  scenario "User should be able to delete a rant" do
+    user = create_user
+    rant = create_rant(user_id: user.id)
+    sign_in(user)
+
+    expect(page).to have_content(rant.content)
+    expect(page).to have_link("Delete")
+
+    click_link("Delete")
+
+    expect(page).to_not have_content(rant.content)
+  end
+
+
 end
