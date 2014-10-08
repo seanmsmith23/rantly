@@ -26,4 +26,16 @@ feature "Rants Homepage" do
     expect(page).to have_content("New Rant")
     expect(page).to have_button("Create Rant")
   end
+
+  scenario "User should be able to post a rant and see it under 'My Rants'" do
+    user = create_user
+    sign_in(user)
+
+    expect(page).to have_content("My Rants")
+
+    fill_in "rant[content]", with: "Something"
+    click_button "Create Rant"
+
+    expect(page).to have_content("Something")
+  end
 end

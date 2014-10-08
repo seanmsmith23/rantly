@@ -4,8 +4,12 @@
 
 <h3>New Rant</h3>
 
-<%= form_for :rant do |f| %>
-  <%= f.label :content %>
-  <%= f.text_area :content %>
+<%= form_for @dashboard.new_rant do |f| %>
+  <%= f.label :content %><br>
+  <%= f.text_area :content %><br>
   <%= f.submit "Create Rant" %>
 <% end %>
+
+<h3>My Rants</h3>
+
+<%= render @dashboard.my_rants %>
