@@ -18,4 +18,12 @@ feature "Rants Homepage" do
 
     expect(page).to have_content("Jim")
   end
+
+  scenario "User should see a place to add their rants" do
+    user = create_user
+    sign_in(user)
+
+    expect(page).to have_content("New Rant")
+    expect(page).to have_button("Create Rant")
+  end
 end
