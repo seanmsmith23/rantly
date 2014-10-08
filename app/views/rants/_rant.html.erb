@@ -1,4 +1,7 @@
 <p>
+  <% if rant.user_id != current_user.id %>
+    <%= rant.user.full_name%> <%= link_to "Follow", user_followers_path(rant.user), method: :post %><br>
+  <% end %>
   <%= rant.content %>
 </p>
 <%= link_to("Delete", rant_path(rant), method: :delete) if rant.user_id == current_user.id %>

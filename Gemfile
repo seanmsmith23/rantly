@@ -19,8 +19,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'launchy'
 end
 
 gem 'bcrypt', '~> 3.1.7'
-
-

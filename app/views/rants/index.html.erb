@@ -10,6 +10,8 @@
   <%= f.submit "Create Rant" %>
 <% end %>
 
+<%= link_to "Following", user_followers_path(current_user) %>
+
 <h3>Latest Rants</h3>
 
 <%= render @dashboard.others_users_rants %>
